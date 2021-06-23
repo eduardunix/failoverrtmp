@@ -2,7 +2,7 @@
 
 # The file to play when the stream is offline, should be full path, and must be readable by nginx
 # The file should have the same resolution and bitrate as your actual stream
-offfi= printenv STREAMOFF
+offfi=$STREAMOFF
 
 # Should be some random unguessable string, this will be your stream key for streamRIP
 secret="dhsadhaldhaslkdaddadas"
@@ -22,3 +22,5 @@ offpidfi=$wd/offline_pid
 onpidfi=$wd/online_pid
 offlo=$wd/offline_lock
 onlo=$wd/online_lock
+
+

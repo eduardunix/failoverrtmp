@@ -1,8 +1,6 @@
 #!/bin/bash 
 
-COMANDO="push"
-RTMPSERVER=printenv RTMPSERVER
-
+COMANDO=push
 
 echo "user www-data;
 worker_processes auto;
@@ -40,10 +38,11 @@ rtmp {
 
                 application live2 {
                          live on;
-                  			 allow 127.0.0.1;
-			                   deny all;
-                         $COMANDO $RTMPSERVER;
+                         allow 127.0.0.1;
+			 deny all;
+			 $COMANDO $RTMPSERVER;
                 }
         }
 }" > /etc/nginx/nginx.conf
+
 
