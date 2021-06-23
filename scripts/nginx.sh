@@ -2,8 +2,6 @@
 
 COMANDO="push"
 RTMPSERVER=printenv RTMPSERVER
-FACEBOOK=printenv FACEBOOK
-COMANDOFACEBOOK=printenv COMANDOFACEBOOK
 
 
 echo "user www-data;
@@ -45,7 +43,6 @@ rtmp {
 			 allow 127.0.0.1;
 			 deny all;
                          $COMANDO $RTMPSERVER;
-			 $COMANDOFACEBOOK $FACEBOOK;
                 }
         }
 }" > /etc/nginx/nginx.conf
