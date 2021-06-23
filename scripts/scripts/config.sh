@@ -2,7 +2,7 @@
 
 # The file to play when the stream is offline, should be full path, and must be readable by nginx
 # The file should have the same resolution and bitrate as your actual stream
-offfi="/mnt/razer.mp4"
+offfi= printenv STREAMOFF
 
 # Should be some random unguessable string, this will be your stream key for streamRIP
 secret="dhsadhaldhaslkdaddadas"

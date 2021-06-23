@@ -1,7 +1,12 @@
 Imagem Docker.
 
-Ajustar seus endereços para transmissão em nginx.sh nas variaveis FACEBOOK e RTMPDESTINO
+Setar nas variaveis abaixo no arquivo Dockerfile
 
+
+STREAMOFF="adicionar rtmp://localhost:1935/v5i8me8h8wysehhv90w7 para live secundaria de backup ou /mnt/scripts/video/video.mp4 para rodar video caso caia a transmissão"
+Obs: para a opção de video crie a pasta video dentro de scripts e adicione o video.mp4.
+
+RTMPSERVER="ADICIONE AQUI A URL DO SERVIDOR RTMP PARA AONDE A TRANSMISSÂO VAI SER ENVIADA"
 
 stream principal 
 rtmp://url/live chave dhsadhaldhaslkdaddadas
