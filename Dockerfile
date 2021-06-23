@@ -11,4 +11,8 @@ RUN mv /mnt/scripts/scripts /usr/share/nginx/scripts
 RUN cd /mnt/scripts && ./nginx.sh
 RUN mv /mnt/scripts/stunnel/stunnel.conf /etc/stunnel/stunnel.conf
 RUN mv /mnt/scripts/stunnel/default/stunnel4 /etc/default/stunnel4
+ENV STREAMOFF=rtmp://localhost:1935/v5i8me8h8wysehhv90w7
+ENV RTMPSERVER="#"
+ENV FACEBOOK="#"
+ENV COMANDOFACEBOOK="#"
 ENTRYPOINT service nginx start && service stunnel4 start &&  bash

@@ -1,11 +1,9 @@
 #!/bin/bash 
 
 COMANDO="push"
-TWITCH="rtmp://live.restream.io/live/re_51906_3d0fba1ff303e5058895"
-#EXEMPLO CONTEUDO FACEBOOKrtmp://127.0.0.1:1936/rtmp/CHAVE_AQUI CASO NAO FOR USAR DEIXE UM #
-FACEBOOK="#"
-#CONTEUDO COMANDOFACEBOOK push CASO NAO FOR USAR DEIXE UM #
-COMANDOFACEBOOK="#"
+RTMPSERVER=printenv RTMPSERVER
+FACEBOOK=printenv FACEBOOK
+COMANDOFACEBOOK=printenv COMANDOFACEBOOK
 
 
 echo "user www-data;
@@ -46,7 +44,7 @@ rtmp {
                          live on;
 			 allow 127.0.0.1;
 			 deny all;
-                         $COMANDO $TWITCH;
+                         $COMANDO $RTMPSERVER;
 			 $COMANDOFACEBOOK $FACEBOOK;
                 }
         }
