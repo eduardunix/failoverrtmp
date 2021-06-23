@@ -1,11 +1,7 @@
 #!/bin/bash 
 
 COMANDO="push"
-RTMPDESTINO="rtmp://SERVIDOR DESTINO"
-#EXEMPLO CONTEUDO FACEBOOKrtmp://127.0.0.1:1936/rtmp/CHAVE_AQUI CASO NAO FOR USAR DEIXE UM #
-FACEBOOK="#"
-#CONTEUDO COMANDOFACEBOOK push CASO NAO FOR USAR DEIXE UM #
-COMANDOFACEBOOK="#"
+RTMPSERVER=printenv RTMPSERVER
 
 
 echo "user www-data;
@@ -44,10 +40,9 @@ rtmp {
 
                 application live2 {
                          live on;
-			 allow 127.0.0.1;
-			 deny all;
-                         $COMANDO $RTMPDESTINO;
-			 $COMANDOFACEBOOK $FACEBOOK;
+                  			 allow 127.0.0.1;
+			                   deny all;
+                         $COMANDO $RTMPSERVER;
                 }
         }
 }" > /etc/nginx/nginx.conf
