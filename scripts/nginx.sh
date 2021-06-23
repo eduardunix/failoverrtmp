@@ -40,8 +40,8 @@ rtmp {
 
                 application live2 {
                          live on;
-			 allow 127.0.0.1;
-			 deny all;
+                  			 allow 127.0.0.1;
+			                   deny all;
                          $COMANDO $RTMPSERVER;
                 }
         }
