@@ -1,8 +1,8 @@
 FROM ubuntu
 EXPOSE 1935
 EXPOSE 1936
-ENV STREAMOFF="rtmp://localhost:1935/v5i8me8h8wysehhv90w7" \
-    RTMPSERVER="rtmp://live.restream.io/live/re_51906_1c3a56be9dfb62c7ed54"
+ENV STREAMOFF="adicionar rtmp://localhost:1935/v5i8me8h8wysehhv90w7 para live secundaria de backup ou /mnt/scripts/video/video.mp4 para rodar video caso caia a transmissão" \
+    RTMPSERVER="ADICIONE AQUI A URL DO SERVIDOR RTMP PARA AONDE A TRANSMISSÂO VAI SER ENVIADA"
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install nginx -y
 RUN apt-get install libnginx-mod-rtmp -y
