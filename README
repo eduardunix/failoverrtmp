@@ -1,6 +1,6 @@
 Imagem Docker.
 
-Ajustar seus endereços para transmissão em nginx.sh nas variaveis FACEBOOK e TWITCH
+Ajustar seus endereços para transmissão em nginx.sh nas variaveis FACEBOOK e RTMPDESTINO
 
 
 stream principal 
