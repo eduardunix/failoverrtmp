@@ -1,0 +1,26 @@
+Ajustar seus endereços para transmissão em nginx.sh nas variaveis FACEBOOK e TWITCH
+
+
+stream principal 
+rtmp://url/live chave dhsadhaldhaslkdaddadas
+
+stream backup
+rtmp://url/v5i8me8h8wysehhv90w7
+
+
+
+
+#BUILDAR A IMAGEM
+docker build  -t kombatklub/failover .
+
+#INICIANDO DOCKER
+sudo docker run -dit  --publish 1935:1935 kombatklub/failover
+
+#LISTANDO DOCKER EM ESTADO DE RUNNING
+docker ps
+
+
+#PARANDO DOCKER
+docker stop ID_DO_CONTAINER
+
+
