@@ -1,7 +1,7 @@
 #!/bin/bash 
 
 COMANDO="push"
-TWITCH="rtmp://SERVIDOR DESTINO"
+RTMPDESTINO="rtmp://SERVIDOR DESTINO"
 #EXEMPLO CONTEUDO FACEBOOKrtmp://127.0.0.1:1936/rtmp/CHAVE_AQUI CASO NAO FOR USAR DEIXE UM #
 FACEBOOK="#"
 #CONTEUDO COMANDOFACEBOOK push CASO NAO FOR USAR DEIXE UM #
@@ -46,7 +46,7 @@ rtmp {
                          live on;
 			 allow 127.0.0.1;
 			 deny all;
-                         $COMANDO $TWITCH;
+                         $COMANDO $RTMPDESTINO;
 			 $COMANDOFACEBOOK $FACEBOOK;
                 }
         }
